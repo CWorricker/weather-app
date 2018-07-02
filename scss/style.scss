@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600");
+
+$white: #fff;
+$light-grey: #f2f2f2;
+$grey: #999;
+$black: #333;
+$red: #f9564f;
+$blue: #1d2063;
+
+$shadow-1: 2px 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-2: 4px 8px 16px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.24);
+
+html {
+	background-repeat: no-repeat;
+	height: 100vh;
+	transistion: background 0.4s;
+	overflow:hidden;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	color: $black;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 160%;
+		height: 160%;
+		transform: translate(-50%);
+		z-index: -999;
+		border: 800px solid rgba(255, 255, 255, 0.08);
+		border-radius: 100%;
+	}
+}
+
+#container {
+	opacity: 0.9;
+	background: $white;
+	width: 400px;
+	margin: calc(50vh - 208px) auto;
+	border-radius: 24px;
+	box-shadow: $shadow-1;
+	transition: 0.24s;
+	overflow: hidden;
+	&:hover {
+		box-shadow: $shadow-2;
+	}
+}
+
+header {
+	height: 80px;
+	border-radius: 24px 24px 0 0;
+	text-align: center;
+}
+
+.search {
+	padding: 24px;
+	input {
+		font-size: 18px;
+		line-height: 24px;
+		padding: 12px 24px;
+		background-color: $light-grey;
+		color: $black;
+		border: none;
+		border-radius: 16px;
+		outline: none;
+		width: 83%;
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
+		&:focus {
+			filter: brightness(96%);
+		}
+		&::placeholder {
+			font-weight: 400;
+			color: $grey;
+		}
+	}
+
+	.search-btn {
+		width: 32px;
+		height: 32px;
+		float: right;
+		margin-right: 12px;
+		margin-top: -44px;
+		position: relative;
+		z-index: 9999;
+	}
+	#search-btn {
+		color: $black;
+		font-size: 16px;
+	}
+}
+
+#image {
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+	margin: 0px auto 24px;
+	box-shadow: $shadow-2;
+	transition: 0.16s;
+	text-align: center;
+	.wi {
+		color: white;
+		font-size: 80px;
+		padding: 40px 0;
+	}
+	&:active {
+		box-shadow: $shadow-1;
+		filter: brightness(92%);
+		transform:scale(0.95);
+	}
+}
+
+#main {
+	padding: 16px 48px 8px;
+}
+
+.location {
+	border-bottom: 2px solid $light-grey;
+	padding: 8px 0;
+}
+#city-name {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 600;
+	text-align: left;
+	display: inline-block;
+}
+#country {
+	display: inline-block;
+	color: $grey;
+	font-size: 16px;
+	padding: 0px 4px;
+}
+
+.temperature {
+	padding: 8px 0;
+}
+.temp-range {
+	display: inline-block;
+	color: $grey;
+	font-size: 16px;
+	padding: 0px 4px;
+}
+.detail {
+	display: inline-block;
+	color: $grey;
+	font-size: 16px;
+	line-height: 40px;
+	float: right;
+	text-transform: capitalize;
+}
+#temp,
+#temp-max,
+#temp-min,
+#wind,
+#weather-desc {
+	display: inline-block;
+}
+#weather-id {
+	display: none;
+}
+.cold {
+	background: linear-gradient(120deg, #6190e8, #a7bfe8);
+}
+
+.hot {
+	background: linear-gradient(120deg, #f12711, #f5af19);
+}
+
+.mild {
+	background: linear-gradient(120deg, #642b73, #c6426e);
+}

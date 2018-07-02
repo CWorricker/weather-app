@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="mild">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Application 3</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="container">
+	<header>
+		<div class="search">
+			<input type="text" placeholder="Enter City Name" id="search-txt">
+			<div class="search-btn">
+				<a id="search-btn" href="#"><span class="fa fa-search"></span></a>
+			</div>
+		</div>
+	</header>
+
+	<main id="main">
+		<div id="weather-id">001</div>
+		<div id="image" class="mild">
+		</div>
+		<div class="location">
+			<div id="city-name">Location</div>
+			<div id="country">NA</div>
+		</div>
+
+		<div class="temperature">
+			<div id="temp">0</div><span class="deg">°c</span>
+			<div class="temp-range">
+				<div id="temp-min">0</div><span class="deg">°c</span> -
+				<div id="temp-max">0</div><span class="deg">°c</span>
+			</div>
+			<div class="detail">
+				<div id="weather-desc">Clear Sky</div>
+				<!--       • <div id="wind">0</div> m/s  -->
+			</div>
+		</div>
+
+	</main>
+</div>
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
