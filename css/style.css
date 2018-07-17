@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,600");
 html {
+  min-width: 616px;
   background-repeat: no-repeat;
   height: 100vh;
-  transistion: background 0.4s;
   overflow: hidden;
 }
 
@@ -13,30 +13,52 @@ body {
   line-height: 32px;
   font-weight: 400;
 }
-body:before {
-  content: "";
-  position: absolute;
-  width: 160%;
-  height: 160%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  z-index: -999;
-  border: 800px solid rgba(255, 255, 255, 0.08);
-  border-radius: 100%;
+
+br {
+  line-height: 50px;
+}
+
+.app {
+  padding: calc(50vh - 200px) calc(50% - 308px);
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.forecast {
+  border-radius: 24px;
+  background: white;
+  margin-left: 16px;
+  width: 96px;
+  display: inline-block;
+  top: 0;
+  float: left;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.24s;
+  padding: 24px 32px 8px;
+}
+.forecast:hover {
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.24);
 }
 
 #container {
-  opacity: 0.9;
+  float: left;
   background: #fff;
-  width: 400px;
-  margin: calc(50vh - 208px) auto;
+  width: 440px;
   border-radius: 24px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.24s;
-  overflow: hidden;
 }
 #container:hover {
   box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.24);
+}
+
+.img-wrap {
+  width: cover;
+  min-height: 100vh;
+  position: absolute;
+  opacity: 0.24;
+  z-index: -99999;
 }
 
 header {
@@ -100,7 +122,7 @@ header {
   height: 160px;
   border-radius: 80px;
   margin: 0px auto 24px;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.24);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.16s;
   text-align: center;
 }
@@ -110,7 +132,7 @@ header {
   padding: 40px 0;
 }
 #image:active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: none;
   -webkit-filter: brightness(92%);
           filter: brightness(92%);
   -webkit-transform: scale(0.95);
@@ -161,15 +183,21 @@ header {
   text-transform: capitalize;
 }
 
-#temp,
-#temp-max,
-#temp-min,
-#wind,
-#weather-desc {
+.inline {
   display: inline-block;
 }
 
-#weather-id {
+#forecastIcon {
+  margin-right: 8px;
+}
+
+#forecastDay {
+  color: #999;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.none {
   display: none;
 }
 
